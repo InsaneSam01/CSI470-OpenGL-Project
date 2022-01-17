@@ -71,7 +71,7 @@ int main() {
 	//Creates camera object
 	Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f ,0.0f, 2.0f));
 
-	Model model("models/retro_television/scene.gltf");
+	Model model("models/bunny/scene.gltf");
 
 	//The Render Loop
 	//Allows the GLFW window to stay open until specifically told to close
