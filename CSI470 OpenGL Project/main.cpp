@@ -28,7 +28,7 @@ int main() {
 	//Creating a GLFW window object with SCR_WIDTH and SCR_HEIGHT
 	//as parameters, the string for a title and NULL to specify if the window
 	//is fullscreen or not
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "THE COOL ZONE", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "THE EPIC RENDERING ZONE", NULL, NULL);
 
 	//Error checking to see if a window is created successfully
 	if (window == NULL) {
@@ -60,6 +60,7 @@ int main() {
 	glm::mat4 lightModel = glm::mat4(1.0f);
 	lightModel = glm::translate(lightModel, lightPos);
 
+	//activate shader to retrieve uniforms from default.frag
 	shaderProgram.Activate();
 	glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
 	glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
@@ -74,7 +75,7 @@ int main() {
 	Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f ,0.0f, 2.0f));
 
 	//Change path to change model NOTE: not all models work preferably a model with only one texture
-	Model model("models/sword/scene.gltf");
+	Model model("models/map/scene.gltf");
 
 	//The Render Loop
 	//Allows the GLFW window to stay open until specifically told to close
