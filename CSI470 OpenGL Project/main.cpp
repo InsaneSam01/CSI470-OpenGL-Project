@@ -73,7 +73,8 @@ int main() {
 	//Creates camera object
 	Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f ,0.0f, 2.0f));
 
-	Model model("models/bunny/scene.gltf");
+	//Change path to change model NOTE: not all models work preferably a model with only one texture
+	Model model("models/map/scene.gltf");
 
 	//The Render Loop
 	//Allows the GLFW window to stay open until specifically told to close
@@ -117,6 +118,7 @@ void processInput(GLFWwindow* window)
 		glfwSetWindowShouldClose(window, true);
 }
 
+//function that automatically updates the size of the GLFW window when resizing
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 	glViewport(0, 0, width, height);
