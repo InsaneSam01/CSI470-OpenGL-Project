@@ -74,7 +74,7 @@ int main() {
 	Camera camera(SCR_WIDTH, SCR_HEIGHT, glm::vec3(0.0f ,0.0f, 2.0f));
 
 	//Change path to change model NOTE: not all models work preferably a model with only one texture
-	Model model("models/map/scene.gltf");
+	Model model("models/sword/scene.gltf");
 
 	//The Render Loop
 	//Allows the GLFW window to stay open until specifically told to close
@@ -91,6 +91,7 @@ int main() {
 		//updates and exports the camera matrix to the Vertex Shader
 		camera.updateMatrix(45.0f, 0.1f, 100.0f);
 		
+		//draw the currently selected model
 		model.Draw(shaderProgram, camera);
 
 		//swap between buffers
