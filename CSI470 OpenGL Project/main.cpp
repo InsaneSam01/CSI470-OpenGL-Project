@@ -19,7 +19,7 @@ int main() {
 	glfwInit();
 
 	//Specify to GLFW what version of OpenGL in currently in use
-	//and what profile is currently in use
+	//and what profile is currently in use (version 3.3, CORE)
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -95,7 +95,7 @@ int main() {
 		//draw the currently selected model
 		model.Draw(shaderProgram, camera);
 
-		//swap between buffers
+		//swap between buffers (switch between front and back buffers)
 		glfwSwapBuffers(window);
 		
 		//Take care of all GLFW events
