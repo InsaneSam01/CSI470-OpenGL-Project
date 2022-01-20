@@ -15,7 +15,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 int main() {
 
-	// Initialize GLFW
+	// Initialize GLFW (Graphics Library Framework)
 	glfwInit();
 
 	//Specify to GLFW what version of OpenGL in currently in use
